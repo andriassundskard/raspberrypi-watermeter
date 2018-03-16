@@ -12,7 +12,8 @@ Using RaspberryPi to graph detailed water usage
 
 ## Software
 
-[Tesseract OCR](https://github.com/tesseract-ocr/tesseract/)
-[RRDTool](https://oss.oetiker.ch/rrdtool/)
-[nginx](https://nginx.org/en/)
+[Tesseract OCR](https://github.com/tesseract-ocr/tesseract/)  
+[RRDTool](https://oss.oetiker.ch/rrdtool/)  
+[nginx](https://nginx.org/en/)  
 
+## Installation

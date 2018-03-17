@@ -20,4 +20,33 @@ Using RaspberryPi to graph detailed water usage
 
 ## Installation
 
+Follow https://www.raspberrypi.org/documentation/installation/ for installation of Raspian.  
+
+Install the needed software by typing the following in a terminal window.  
+```bash
+sudo su -
+apt-get update
+apt-get install nginx imagemagick tesseract-ocr rrdtool
+```
+
+## Configuration
+
+### Raspian
+
+Configure RaspberryPi with camera support. You migth also want to enable SSH in order to get easy access to it later.  
+
+### RRDtool
+
+Configure RRD database that expects values between 0 and 1000 every minute.  
+
+```bash
+rrdtool create water.rrd \
+    --start now-1d \
+    --step 1m \
+    DS:usage:GAUGE:5m:0:1000 \
+    RRA:AVERAGE:0.5:1m:90d \
+    RRA:AVERAGE:0.5:1h:18M \
+    RRA:AVERAGE:0.5:1d:10y \
+```
+
 ## Running

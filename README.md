@@ -2,7 +2,7 @@
 
 Using RaspberryPi to graph detailed water usage
 
-## Components
+## Hardware
 
 * Raspberry Pi Zero W
 * Official Raspberry Pi Power Adapter 5V 2.5A
@@ -12,8 +12,12 @@ Using RaspberryPi to graph detailed water usage
 
 ## Software
 
+[Raspian](https://www.raspbian.org/)
+[nginx](https://nginx.org/en/)  
+[ImageMagick](https://www.imagemagick.org/)
 [tesseract-ocr](https://github.com/tesseract-ocr/)  
 [RRDtool](https://oss.oetiker.ch/rrdtool/)  
-[nginx](https://nginx.org/en/)  
 
 ## Installation
+
+## Running

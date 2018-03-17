@@ -24,9 +24,8 @@ Follow https://www.raspberrypi.org/documentation/installation/ for installation 
 
 Install the needed software by typing the following in a terminal window.  
 ```bash
-sudo su -
-apt-get update
-apt-get install nginx imagemagick tesseract-ocr rrdtool
+sudo apt-get update
+sudo apt-get install nginx imagemagick tesseract-ocr rrdtool
 ```
 
 ## Configuration

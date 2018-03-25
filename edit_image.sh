@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # Take picture
+./on.py
 echo "Taking picture"
+sleep 1
+./off.py
 
 sudo cp water.jpg /var/www/html/debug/
 

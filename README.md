@@ -9,6 +9,8 @@ Using RaspberryPi to graph detailed water usage
 * Raspberry Pi Camera Board v2.1  
 * [ZeroView](https://thepihut.com/products/zeroview)  
 * 16GB Micro SD  
+* 2 x 5mm white LED  
+* 2 x 150 ohms resistor  
 
 ## Software
 

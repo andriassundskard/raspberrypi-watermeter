@@ -1,16 +1,19 @@
 #!/usr/bin/env bash
-# Take picture
-./on.py
-echo "Taking picture"
-sleep 1
-./off.py
 
-sudo cp water.jpg /var/www/html/debug/
+# Get current dir
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+echo "Working directory is $DIR"
+
+# Take picture
+echo "Taking picture"
+$DIR/on.py
+raspistill -o $DIR/water.jpg --nopreview --exposure auto --timeout 1
+$DIR/off.py
+sudo cp $DIR/water.jpg /var/www/html/debug/
 
 # Optimize image
 echo "Optimizing image"
-convert water.jpg \
-	-rotate 1 \
+convert $DIR/water.jpg \
 	-crop 1000x200+1660+1080 +repage \
 	-normalize \
 	-threshold 55% \
@@ -25,11 +28,17 @@ convert water.jpg \
 	-draw "rectangle 727,0 778,200" \
 	-draw "rectangle 847,0 903,200" \
 	-draw "rectangle 972,0 1000,200" \
-	water_edited.jpg
-sudo cp water_edited.jpg /var/www/html/debug/
+	$DIR/water_edited.jpg
+sudo cp $DIR/water_edited.jpg /var/www/html/debug/
 
 # Do OCR
-echo "OCR scanning"
-convert water_edited.jpg -density 300 -depth 8 -strip -background white -alpha off water_edited.tiff
-tesseract water_edited.tiff stdout digits
+#echo "OCR scanning"
+#convert $DIR/water_edited.jpg -density 300 -depth 8 -strip -background white -alpha off $DIR/water_edited.tiff
+#tesseract $DIR/water_edited.tiff stdout digits
+
+# Clean
+echo "Cleaning"
+rm -f $DIR/water.jpg
+rm -f $DIR/water_edited.jpg
+rm -f $DIR/water_edited.tiff
 

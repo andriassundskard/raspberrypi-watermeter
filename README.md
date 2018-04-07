@@ -5,12 +5,13 @@ Using RaspberryPi to graph detailed water usage
 ## Hardware
 
 * Raspberry Pi Zero W  
+* Raspberry Pi Zero Case  
 * Official Raspberry Pi Power Adapter 5V 2.5A  
 * Raspberry Pi Camera Board v2.1  
-* [ZeroView](https://thepihut.com/products/zeroview)  
 * 16GB Micro SD  
 * 2 x 5mm white LED  
 * 2 x 150 ohms resistor  
+* Soldering kit, wires, etc..  
 
 ## Software
 
@@ -19,6 +20,8 @@ Using RaspberryPi to graph detailed water usage
 [ImageMagick](https://www.imagemagick.org/)  
 [tesseract-ocr](https://github.com/tesseract-ocr/)  
 [RRDtool](https://oss.oetiker.ch/rrdtool/)  
+[InfluxDB](https://www.influxdata.com)  
+[Grafana](https://grafana.com)  
 
 ## Installation
 

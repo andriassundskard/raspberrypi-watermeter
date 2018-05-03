@@ -23,6 +23,12 @@ Using RaspberryPi to graph detailed water usage
 [InfluxDB](https://www.influxdata.com)  
 [Grafana](https://grafana.com)  
 
+## Mounting
+
+Drill holes for the LEDs and mount on the case. Connect the LEDs to the GPIO pins on the Raspberry PI.  
+
+![Device](scripts/device.jpg)
+
 ## Installation
 
 Follow https://www.raspberrypi.org/documentation/installation/ for installation of Raspian.  

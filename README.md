@@ -27,7 +27,7 @@ Using RaspberryPi to graph detailed water usage
 
 Drill holes for the LEDs and mount on the case. Connect the LEDs to the GPIO pins on the Raspberry PI.  
 
-![Device](scripts/device.jpg)
+![Device](images/device.jpg)
 
 ## Installation
 

@@ -26,7 +26,7 @@ Using RaspberryPi to graph detailed water usage
 ## Mounting
 
 Drill holes for the LEDs and mount on the case. Connect the LEDs to the GPIO pins on the Raspberry PI.  
-To limit the current to around 30mA you'll need to connect a 150 ohms resistor between the GPIO pin and each LED. In my case I have used PIN 6 for GND and PIN 16 for signal.  
+To limit the current to around 30mA you'll need to connect a 150 ohms resistor between the GPIO pin and each LED. In my case I have used PIN 6 for GND and PIN 16 (GPIO.23) for signal.  
 ```text
 PIN 16 -> 150 ohms resistor -> LED-1 -> PIN 6.
        -> 150 ohms resistor -> LED-2 ->
